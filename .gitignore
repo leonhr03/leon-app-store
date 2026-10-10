@@ -41,3 +41,8 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Backend runtime data
+/server/uploads/
+/server/apps.json
+/server/node_modules/
