@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="headerLeft">
+    <h1>Leon AppStore</h1>
+    <a routerLink="/">Entdecken</a>
+    <a routerLink="/newApp">Neue App</a>
+  </div>
+
+  <input placeholder="Search">
+</div>
+
+<div class="appList">
+  @for (app of apps(); track app.apkUrl) {
+    <div class="appCard">
+      <div class="iconContainer">
+        <img [src]="app.iconUrl" height="100" width="100" [alt]="app.name + ' Logo'" />
+      </div>
+      <div class="textContainer">
+        <h2>{{ app.name }}</h2>
+        <p>{{ app.description }}</p>
+      </div>
+      <div class="buttonContainer">
+        <a class="downloadButton" [href]="app.apkUrl" download>Laden</a>
+      </div>
+    </div>
+  }
+</div>

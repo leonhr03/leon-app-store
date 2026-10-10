@@ -1,0 +1,159 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20%;
+  margin-bottom: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.header input {
+  padding: 10px;
+  border-radius: 15px;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.content h1 {
+  text-align: left;
+  font-size: 50px;
+}
+
+.newAppCard {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EBEBEB;
+  padding: 20px;
+  border-radius: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#appCardHeading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.appIconContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.appIcon {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  border: 1px dashed black;
+  align-items: center;
+  justify-content: center;
+}
+
+.chooseIconButton {
+  border-radius: 15px;
+  background-color: #D9D9D9;
+  border: none;
+  color: black;
+  padding: 10px;
+  width: 95%;
+}
+
+.appPackageContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px dashed black;
+  width: 95%;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.form input, textarea {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+.deployButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 15px;
+  width: 95%;
+  text-align: center;
+  align-self: center;
+}
+
+.deployButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  color: #c0392b;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .headerLeft {
+    flex-wrap: wrap;
+  }
+
+  .header input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .newAppCard {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .appIconContainer {
+    flex-direction: column;
+  }
+}
+
+

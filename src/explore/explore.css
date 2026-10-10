@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 20%;
+  margin-bottom: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.header input {
+  padding: 10px;
+  border-radius: 15px;
+  width: 20%;
+  border: 1px solid black;
+}
+
+.appList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.appCard {
+  display: flex;
+  border-radius: 15px;
+  background-color: #EBEBEB;
+  padding: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconContainer{
+  width: 20%;
+}
+
+.textContainer {
+  width: 60%;
+}
+
+.buttonContainer {
+  width: 20%;
+}
+
+.appCard img {
+  border-radius: 15px;
+  aspect-ratio: 1/1;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.appCardText {
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.buttonContainer button,
+.buttonContainer .downloadButton {
+  border-radius: 15px;
+  background-color: #D9D9D9;
+  border: none;
+  color: black;
+  padding: 10px;
+  width: 95%;
+}
+
+.buttonContainer .downloadButton {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .headerLeft {
+    flex-wrap: wrap;
+  }
+
+  .header input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .appList {
+    grid-template-columns: 1fr;
+  }
+
+  .iconContainer {
+    width: auto;
+  }
+
+  .textContainer {
+    width: auto;
+    flex: 1;
+  }
+
+  .buttonContainer {
+    width: auto;
+  }
+}

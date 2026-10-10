@@ -1,0 +1,71 @@
+<div class="header">
+  <div class="headerLeft">
+    <h1>Leon AppStore</h1>
+    <a routerLink="/">Entdecken</a>
+    <a routerLink="/newApp">Neue App</a>
+  </div>
+
+  <input placeholder="Search">
+</div>
+
+
+
+<div class="content">
+  <h1>Neue App Veröffentlichen</h1>
+
+  <div class="newAppCard">
+    <div class="newAppCardSite">
+
+      <div class="appIconContainer">
+        <div class="appIcon">
+          @if (iconSrc) {
+            <img [src]="iconSrc" alt="Ausgewähltes Icon" style="width: 100px; height: 100px; object-fit: contain; border-radius: 15px" />
+          }
+          @else {
+            <p>Icon</p>
+          }
+        </div>
+        <div>
+          <p id="appCardHeading">App Icon</p>
+          <button class="chooseIconButton" (click)="iconInput.click()">Icon wählen</button>
+          <input
+            #iconInput
+            type="file"
+            style="display: none"
+            (change)="onIconFileSelected($event)"
+            accept=".png"
+          />
+        </div>
+      </div>
+
+      <div class="appPackageContainer">
+        <p id="appCardHeading">App-Datei hier Hochladen</p>
+        @if (appPackageName) {
+          <p>{{appPackageName}}</p>
+        }
+        <button class="chooseIconButton" (click)="fileInput.click()">Datei wählen</button>
+
+        <input
+          #fileInput
+          type="file"
+          style="display: none"
+          (change)="onAppFileSelected($event)"
+          accept=".apk"
+        />
+      </div>
+  </div>
+
+    <div class="form">
+      <input placeholder="App Name" [(ngModel)]="name">
+      <input placeholder="Version" [(ngModel)]="version">
+      <textarea placeholder="Beschreibung" rows="7" [(ngModel)]="description"></textarea>
+      @if (errorMessage) {
+        <p class="errorMessage">{{ errorMessage }}</p>
+      }
+      <button class="deployButton" (click)="deployApp()" [disabled]="isDeploying">
+        {{ isDeploying ? 'Wird veröffentlicht…' : 'Veröffentlichen' }}
+      </button>
+    </div>
+
+  </div>
+</div>
