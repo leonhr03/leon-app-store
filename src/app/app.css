@@ -31,14 +31,15 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  border: 1px solid black;
-  max-height: 15%;
-  min-height: 15%;
 }
 
 .appCard img {
   border-radius: 15px;
   aspect-ratio: 1/1;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .appCardText {
