@@ -1,159 +1,238 @@
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  height: 20%;
-  margin-bottom: 20px;
+.page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 72px 22px 120px;
 }
 
-.headerLeft {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
+.hero {
+  margin-bottom: 48px;
 }
 
-.header input {
-  padding: 10px;
-  border-radius: 15px;
-  width: 20%;
-  border: 1px solid black;
+.hero h1 {
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
 }
 
-.content {
+.subhead {
+  margin-top: 12px;
+  font-size: clamp(19px, 2.5vw, 24px);
+  font-weight: 400;
+  color: var(--text-tertiary);
+  letter-spacing: 0.009em;
+  max-width: 620px;
+}
+
+.publish-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  gap: 20px;
+  gap: 32px;
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
 }
 
-.content h1 {
-  text-align: left;
-  font-size: 50px;
-}
-
-.newAppCard {
+.upload-grid {
   display: grid;
-  flex-direction: column;
-  align-items: center;
-  background-color: #EBEBEB;
-  padding: 20px;
-  border-radius: 15px;
   grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-#appCardHeading {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.appIconContainer {
+.field-block {
   display: flex;
-  gap: 10px;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.appIcon {
+.block-heading {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.icon-row {
   display: flex;
-  height: 100px;
-  width: 100px;
-  border-radius: 15px;
-  border: 1px dashed black;
   align-items: center;
-  justify-content: center;
+  gap: 18px;
 }
 
-.chooseIconButton {
-  border-radius: 15px;
-  background-color: #D9D9D9;
+.icon-preview {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--text-tertiary);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.icon-preview svg {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icon-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.secondary-button {
+  align-self: flex-start;
+  padding: 8px 18px;
   border: none;
-  color: black;
-  padding: 10px;
-  width: 95%;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease;
 }
 
-.appPackageContainer {
+.secondary-button:hover {
+  background: #fafafa;
+}
+
+.dropzone {
   display: flex;
-  gap: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
-  border: 1px dashed black;
-  width: 95%;
+  gap: 8px;
+  min-height: 108px;
   padding: 20px;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.dropzone-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--text-tertiary);
+}
+
+.dropzone-text {
+  font-size: 14px;
+  color: var(--text-tertiary);
+}
+
+.file-name {
+  font-size: 14px;
+  font-weight: 500;
+  word-break: break-all;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  gap: 10px;
+  gap: 18px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.form input, textarea {
-  padding: 10px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.deployButton {
-  background-color: #000;
-  color: white;
+.input-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form input,
+.form textarea {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text);
+  font-size: 17px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.18);
+}
+
+.error-message {
+  font-size: 14px;
+  color: #e30000;
+}
+
+.deploy-button {
+  align-self: flex-start;
+  padding: 12px 28px;
   border: none;
-  font-weight: bold;
-  border-radius: 15px;
-  padding: 15px;
-  width: 95%;
-  text-align: center;
-  align-self: center;
+  border-radius: var(--radius-pill);
+  background: var(--blue);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.deployButton:disabled {
-  opacity: 0.6;
+.deploy-button:hover:not(:disabled) {
+  background: var(--blue-hover);
+}
+
+.deploy-button:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-.errorMessage {
-  color: #c0392b;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .header {
-    flex-wrap: wrap;
-    gap: 10px;
-    height: auto;
-    padding: 15px;
+@media (max-width: 640px) {
+  .page {
+    padding: 48px 18px 80px;
   }
 
-  .headerLeft {
-    flex-wrap: wrap;
+  .publish-card {
+    padding: 22px;
   }
 
-  .header input {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .content h1 {
-    font-size: 32px;
-  }
-
-  .newAppCard {
+  .upload-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
-  .appIconContainer {
-    flex-direction: column;
+  .deploy-button {
+    align-self: stretch;
+    text-align: center;
   }
 }
-
-

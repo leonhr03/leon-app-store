@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiService } from '../app/api.service';
+import { Header } from '../app/header/header';
 
 @Component({
-  imports: [RouterLink, FormsModule],
+  imports: [FormsModule, Header],
   selector: 'app-new-app',
   styleUrl: './new-app.css',
   templateUrl: './new-app.html',

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1791666054779,
+  "timestamp": 1791914542338,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,9 +13,9 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main-5O23VOIP.js",
+        "/main-55B5J62S.js",
         "/manifest.webmanifest",
-        "/styles-XO73XDTM.css"
+        "/styles-BVREH5NN.css"
       ],
       "patterns": []
     },
@@ -67,10 +67,10 @@
     "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
     "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
     "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
-    "/index.html": "0eb7f9f7050967b3b91d05350be9c7e296849da2",
-    "/main-5O23VOIP.js": "80c518bc39f928745dc93acbe749819589fcb1ae",
+    "/index.html": "9f971fa058538d53b80dd8593bbc8fa851134127",
+    "/main-55B5J62S.js": "cb6d2633b91ee4c163204b87c729e8e19ad4b9ce",
     "/manifest.webmanifest": "7a8ab0236f2491dbca46f895abed596b5d586062",
-    "/styles-XO73XDTM.css": "bb02e7d2de5c0a11fb2c7b92e2c028e3d5c8506a"
+    "/styles-BVREH5NN.css": "79ae75f2b0c03a6e1428bd57ed8d9b2e0f891be5"
   },
   "navigationUrls": [
     {
