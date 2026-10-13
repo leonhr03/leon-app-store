@@ -41,3 +41,9 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Go API runtime data + build output
+/server/api/uploads/
+/server/api/apps.json
+/server/api/leon-app-store-api
+/server/api/*.exe
