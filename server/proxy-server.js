@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = Number(process.env.PORT || 3000);
-const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8080';
+const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:9999';
 const backend = new URL(BACKEND_URL);
 const BACKEND_PORT = Number(backend.port || (backend.protocol === 'https:' ? 443 : 80));
 const ROOT = __dirname;
